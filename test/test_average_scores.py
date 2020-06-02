@@ -13,6 +13,7 @@ from format_output import average_scores as avg
 
 class MyTestCase(unittest.TestCase):
     def test_average(self):
+        # mock input from a user
         with mock.patch('builtins.input', side_effect=[85, 90, 95]):
             assert avg.average() == 90
 
